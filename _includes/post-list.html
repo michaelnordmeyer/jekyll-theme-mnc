@@ -1,0 +1,11 @@
+<article>
+        <header>
+          <p>{{ post.date | date: date_format }}</p>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        </header>
+        {% if site.show_excerpts -%}
+        <p>
+          {{ post.excerpt | strip_html | escape }}
+        </p>
+        {%- endif %}
+      </article>

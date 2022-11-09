@@ -1,0 +1,64 @@
+title: Your awesome title
+author:
+  name: Your name
+  email: you@example.com
+  bio: Your medium-long bio, which, if present, goes into the footer to give the reader an idea of who you are or what you do or what the site is about.
+description: > # This means to ignore newlines until "show_excerpts:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+show_excerpts: false # set to true to show excerpts on the homepage
+
+# Theme settings
+jekyll-theme-mnc:
+  # Theme's date format
+  # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+  date_format: "%Y-%m-%d"
+  category-slug: "category"
+
+  # Generate social links in footer
+  social_links:
+    twitter: jekyllrb
+    github:  jekyll
+    # devto: jekyll
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    linkedin: jekyll
+    # xing: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+  # If you want to link only specific pages in your header, uncomment
+  # this and add the path to the pages in order as they should show up
+  header_pages:
+    - about.md
+
+# Build settings
+theme: jekyll-theme-mnc
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag

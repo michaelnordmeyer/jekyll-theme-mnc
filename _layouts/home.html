@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<main aria-label="Content">
+    <div itemscope itemtype="https://schema.org/Blog">
+      {% if page.title -%}
+      <h1>{{ page.title }}</h1>
+      {%- endif %}
+
+      {{ content }}
+
+      {%- if site.paginate -%}
+        {%- assign posts = paginator.posts -%}
+      {%- else -%}
+        {%- assign posts = site.posts -%}
+      {%- endif -%}
+
+      {%- if posts.size > 0 -%}
+        {%- if page.list_title %}
+      <h3>{{ page.list_title }}</h3>
+        {% endif %}
+        {%- assign date_format = site.jekyll-theme-mnc.date_format | default: "%b %-d, %Y" -%}
+        {%- for post in posts %}
+      {% include post-list.html %}
+        {%- endfor %}
+
+      <p><small>Subscribe to updates <a href="{{ '/feed.xml' | relative_url }}" rel="alternate">via RSS feed</a> or <a href="{{ '/feed.json' | relative_url }}" rel="alternate">via JSON feed</a></small></p>
+      {%- endif %}
+    </div>
+  </main>

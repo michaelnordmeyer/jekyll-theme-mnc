@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  <meta name="robots" content="noindex,follow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <title>Redirecting from {{ page.redirect.from | relative_url }} to {{ page.redirect.to | absolute_url }}</title>
+  <meta name="description" content="Redirect page">
+  <link rel="Shortcut Icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="canonical" href="{{ page.redirect.to | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect.to | absolute_url }}">
+</head>
+<body>
+{% include header.html %}
+
+  <main aria-label="Content">
+    <article itemscope itemtype="https://schema.org/WebPage">
+      <header>
+        <h1 itemprop="headline" itemscope itemtype="https://schema.org/Text">Redirecting…</h1>
+      </header>
+      <div itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/WebPageElement">
+        <a href="{{ page.redirect.to | absolute_url }}">Click here if you are not being redirected.</a>
+        <script>location="{{ page.redirect.to | absolute_url }}"</script>
+      </div>
+    </article>
+  </main>
+
+{% include footer.html %}
+</body>
+</html>

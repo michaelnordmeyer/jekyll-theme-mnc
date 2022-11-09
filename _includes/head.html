@@ -1,0 +1,13 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  {% feed_meta %}
+  <link type="application/json" rel="alternate" href="{{ '/feed.json' | relative_url }}" title="{{ site.title | escape }}">
+  <link rel="Shortcut Icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+  {%- if jekyll.environment == 'production' and site.jekyll-theme-mnc.analytics -%}
+    {%- include analytics.html -%}
+  {%- endif %}
+  {% include custom-head.html %}
+</head>
