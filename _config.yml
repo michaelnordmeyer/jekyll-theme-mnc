@@ -9,6 +9,7 @@ description: > # This means to ignore newlines until "show_excerpts:"
   Google search results) and in your feed.xml site description.
 
 show_excerpts: false # set to true to show excerpts on the homepage
+exclude: [404.md, CODE_OF_CONDUCT.md, History.markdown, jekyll-theme-mnc.gemspec, LICENSE.txt, screenshot-dark.png, screenshot-light.png, script]
 
 # Theme settings
 jekyll-theme-mnc:
