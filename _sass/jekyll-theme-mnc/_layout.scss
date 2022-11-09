@@ -36,6 +36,10 @@ body > header {
     float: right;
     line-height: $base-line-height * $base-font-size * 2.25 - 18px;
 
+    details > a {
+      padding-right: 9px;
+    }
+    
     summary::-webkit-details-marker { display: none; }
     summary {
       cursor: pointer;
