@@ -36,16 +36,12 @@ body > header {
     float: right;
     line-height: $base-line-height * $base-font-size * 2.25 - 18px;
 
-    details {
-      padding: 0 9px;
-    }
-
     summary::-webkit-details-marker { display: none; }
     summary {
       cursor: pointer;
       list-style: none;
       line-height: 16px;
-      margin: 10px 0 8px;
+      padding: 10px 9px 8px;
 
       > svg path {
         fill: $border-color-03;
