@@ -6,7 +6,7 @@
 
 *Running `bundle show jekyll-theme-mnc` will provide you with the local path to your current theme version.*
 
-[Theme preview](XXXXXXXXXXXXXXXXXX)
+[Theme preview](https://michaelnordmeyer.com/)
 
 ![jekyll-theme-mnc theme preview light](/screenshot-light.png)
 
