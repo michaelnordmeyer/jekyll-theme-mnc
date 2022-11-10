@@ -240,86 +240,88 @@ $table-border-color: $lm-table-border-color;
   // Auto mode
 
   :root {
-    --mnc-brand-color: #{$lm-brand-color};
-    --mnc-brand-color-light: #{$lm-brand-color-light};
-    --mnc-brand-color-dark: #{$lm-brand-color-dark};
+    --jekyll-theme-mnc-brand-color: #{$lm-brand-color};
+    --jekyll-theme-mnc-brand-color-light: #{$lm-brand-color-light};
+    --jekyll-theme-mnc-brand-color-dark: #{$lm-brand-color-dark};
 
-    --mnc-site-title-color: #{$lm-site-title-color};
+    --jekyll-theme-mnc-site-title-color: #{$lm-site-title-color};
 
-    --mnc-text-color: #{$lm-text-color};
-    --mnc-background-color: #{$lm-background-color};
-    --mnc-code-background-color: #{$lm-code-background-color};
+    --jekyll-theme-mnc-text-color: #{$lm-text-color};
+    --jekyll-theme-mnc-background-color: #{$lm-background-color};
+    --jekyll-theme-mnc-code-background-color: #{$lm-code-background-color};
 
-    --mnc-link-base-color: #{$lm-link-base-color};
-    --mnc-link-visited-color: #{$lm-link-visited-color};
-    --mnc-link-hover-color: #{$lm-link-hover-color};
+    --jekyll-theme-mnc-link-base-color: #{$lm-link-base-color};
+    --jekyll-theme-mnc-link-visited-color: #{$lm-link-visited-color};
+    --jekyll-theme-mnc-link-hover-color: #{$lm-link-hover-color};
 
-    --mnc-border-color-01: #{$lm-border-color-01};
-    --mnc-border-color-02: #{$lm-border-color-02};
-    --mnc-border-color-03: #{$lm-border-color-03};
+    --jekyll-theme-mnc-border-color-01: #{$lm-border-color-01};
+    --jekyll-theme-mnc-border-color-02: #{$lm-border-color-02};
+    --jekyll-theme-mnc-border-color-03: #{$lm-border-color-03};
 
-    --mnc-table-text-color: #{$lm-table-text-color};
-    --mnc-table-zebra-color: #{$lm-table-zebra-color};
-    --mnc-table-header-bg-color: #{$lm-table-header-bg-color};
-    --mnc-table-header-border: #{$lm-table-header-border};
-    --mnc-table-border-color: #{$lm-table-border-color};
+    --jekyll-theme-mnc-table-text-color: #{$lm-table-text-color};
+    --jekyll-theme-mnc-table-zebra-color: #{$lm-table-zebra-color};
+    --jekyll-theme-mnc-table-header-bg-color: #{$lm-table-header-bg-color};
+    --jekyll-theme-mnc-table-header-border: #{$lm-table-header-border};
+    --jekyll-theme-mnc-table-border-color: #{$lm-table-border-color};
   }
 
   @include lm-highlight;
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --mnc-brand-color: #{$dm-brand-color};
-      --mnc-brand-color-light: #{$dm-brand-color-light};
-      --mnc-brand-color-dark: #{$dm-brand-color-dark};
+      --jekyll-theme-mnc-brand-color: #{$dm-brand-color};
+      --jekyll-theme-mnc-brand-color-light: #{$dm-brand-color-light};
+      --jekyll-theme-mnc-brand-color-dark: #{$dm-brand-color-dark};
 
-      --mnc-site-title-color: #{$dm-site-title-color};
+      --jekyll-theme-mnc-site-title-color: #{$dm-site-title-color};
 
-      --mnc-text-color: #{$dm-text-color};
-      --mnc-background-color: #{$dm-background-color};
-      --mnc-code-background-color: #{$dm-code-background-color};
+      --jekyll-theme-mnc-text-color: #{$dm-text-color};
+      --jekyll-theme-mnc-background-color: #{$dm-background-color};
+      --jekyll-theme-mnc-code-background-color: #{$dm-code-background-color};
 
-      --mnc-link-base-color: #{$dm-link-base-color};
-      --mnc-link-visited-color: #{$dm-link-visited-color};
-      --mnc-link-hover-color: #{$dm-link-hover-color};
+      --jekyll-theme-mnc-link-base-color: #{$dm-link-base-color};
+      --jekyll-theme-mnc-link-visited-color: #{$dm-link-visited-color};
+      --jekyll-theme-mnc-link-hover-color: #{$dm-link-hover-color};
 
-      --mnc-border-color-01: #{$dm-border-color-01};
-      --mnc-border-color-02: #{$dm-border-color-02};
-      --mnc-border-color-03: #{$dm-border-color-03};
+      --jekyll-theme-mnc-border-color-01: #{$dm-border-color-01};
+      --jekyll-theme-mnc-border-color-02: #{$dm-border-color-02};
+      --jekyll-theme-mnc-border-color-03: #{$dm-border-color-03};
 
-      --mnc-table-text-color: #{$dm-table-text-color};
-      --mnc-table-zebra-color: #{$dm-table-zebra-color};
-      --mnc-table-header-bg-color: #{$dm-table-header-bg-color};
-      --mnc-table-header-border: #{$dm-table-header-border};
-      --mnc-table-border-color: #{$dm-table-border-color};
+      --jekyll-theme-mnc-table-text-color: #{$dm-table-text-color};
+      --jekyll-theme-mnc-table-zebra-color: #{$dm-table-zebra-color};
+      --jekyll-theme-mnc-table-header-bg-color: #{$dm-table-header-bg-color};
+      --jekyll-theme-mnc-table-header-border: #{$dm-table-header-border};
+      --jekyll-theme-mnc-table-border-color: #{$dm-table-border-color};
+      
+      color-scheme: dark;
     }
 
     @include dm-highlight;
   }
 
-  $brand-color: var(--mnc-brand-color);
-  $brand-color-light: var(--mnc-brand-color-light);
-  $brand-color-dark: var(--mnc-brand-color-dark);
+  $brand-color: var(--jekyll-theme-mnc-brand-color);
+  $brand-color-light: var(--jekyll-theme-mnc-brand-color-light);
+  $brand-color-dark: var(--jekyll-theme-mnc-brand-color-dark);
 
-  $site-title-color: var(--mnc-site-title-color);
+  $site-title-color: var(--jekyll-theme-mnc-site-title-color);
 
-  $text-color: var(--mnc-text-color);
-  $background-color: var(--mnc-background-color);
-  $code-background-color: var(--mnc-code-background-color);
+  $text-color: var(--jekyll-theme-mnc-text-color);
+  $background-color: var(--jekyll-theme-mnc-background-color);
+  $code-background-color: var(--jekyll-theme-mnc-code-background-color);
 
-  $link-base-color: var(--mnc-link-base-color);
-  $link-visited-color: var(--mnc-link-visited-color);
-  $link-hover-color: var(--mnc-link-hover-color);
+  $link-base-color: var(--jekyll-theme-mnc-link-base-color);
+  $link-visited-color: var(--jekyll-theme-mnc-link-visited-color);
+  $link-hover-color: var(--jekyll-theme-mnc-link-hover-color);
 
-  $border-color-01: var(--mnc-border-color-01);
-  $border-color-02: var(--mnc-border-color-02);
-  $border-color-03: var(--mnc-border-color-03);
+  $border-color-01: var(--jekyll-theme-mnc-border-color-01);
+  $border-color-02: var(--jekyll-theme-mnc-border-color-02);
+  $border-color-03: var(--jekyll-theme-mnc-border-color-03);
 
-  $table-text-color: var(--mnc-table-text-color);
-  $table-zebra-color: var(--mnc-table-zebra-color);
-  $table-header-bg-color: var(--mnc-table-header-bg-color);
-  $table-header-border: var(--mnc-table-header-border);
-  $table-border-color: var(--mnc-table-border-color);
+  $table-text-color: var(--jekyll-theme-mnc-table-text-color);
+  $table-zebra-color: var(--jekyll-theme-mnc-table-zebra-color);
+  $table-header-bg-color: var(--jekyll-theme-mnc-table-header-bg-color);
+  $table-header-border: var(--jekyll-theme-mnc-table-header-border);
+  $table-border-color: var(--jekyll-theme-mnc-table-border-color);
 
 
 } @else if $color-scheme-dark {
