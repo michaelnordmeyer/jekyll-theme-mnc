@@ -299,6 +299,14 @@ To display post-excerpts on the Home Page, simply add the following to your `_co
 show_excerpts: true
 ```
 
+### Reading Time
+
+The reading time is calculated and display at the beginning of each post. To adjust the reading speed, simply add the following to your `_config.yml` and choose a number for words per minute:
+
+```yaml
+reading-speed: 180
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/michaelnordmeyer/jekyll-theme-mnc. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.

@@ -17,6 +17,7 @@ jekyll-theme-mnc:
   # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
   date_format: "%Y-%m-%d"
   category-slug: "category"
+  reading-speed: 180 # To calculate reading time. Default is 180 words per minute
 
   # Generate social links in footer
   social_links:

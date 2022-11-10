@@ -20,7 +20,8 @@ layout: default
               {%- unless forloop.last %}, {% endunless -%}
             {% endfor %}
           {%- endif %}
-          {% assign minutes = content | strip_html | number_of_words | divided_by: 180 -%}
+          {% assign wpm = site.jekyll-theme-mnc.reading-speed | default: 180 -%}
+          {%- assign minutes = content | strip_html | number_of_words | divided_by: wpm -%}
           {%- if minutes == 0 -%}
             {%- assign minutes = 1 -%}
           {%- endif -%}
