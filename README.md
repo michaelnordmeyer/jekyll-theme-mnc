@@ -6,7 +6,7 @@
 
 *Running `bundle show jekyll-theme-mnc` will provide you with the local path to your current theme version.*
 
-[Theme preview](https://michaelnordmeyer.com/)
+[Theme preview](https://jekyll-theme-mnc.michaelnordmeyer.com)
 
 ![jekyll-theme-mnc theme preview light](/screenshot-light.png)
 
@@ -62,7 +62,6 @@ Refers to snippets of code within the `_includes` directory that can be inserted
   - `header.html` – Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
   - `search-duckduckgo.html` – Renders DuckDuckGo custom search.
   - `social.html` – Renders social-media icons based on the `jekyll-theme-mnc:social_links` data in the config file.
-  - `social-min.html` – As above, but only for Github, LinkedIn, XING, and Twitter. Uses a smaller SVG. Usage: Search for social.html and replace with social-min.html.
 
 ### Sass
 

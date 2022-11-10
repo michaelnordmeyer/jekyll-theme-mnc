@@ -1,7 +1,0 @@
-{%- assign social = site.jekyll-theme-mnc.social_links -%}
-<span>
-        {% if social.github -%}<a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons-min.svg#github' | relative_url }}"></use></svg></a>{%- endif %}
-        {% if social.linkedin -%}<a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }}"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons-min.svg#linkedin' | relative_url }}"></use></svg></a>{%- endif %}
-        {% if social.xing -%}<a href="https://www.xing.com/profile/{{ social.xing | cgi_escape | escape }}" title="{{ social.xing | escape }}"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons-min.svg#xing' | relative_url }}"></use></svg></a>{%- endif %}
-        {% if social.twitter -%}<a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons-min.svg#twitter' | relative_url }}"></use></svg></a>{%- endif %}
-      </span>
