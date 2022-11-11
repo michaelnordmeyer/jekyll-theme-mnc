@@ -79,6 +79,7 @@ body > main {
 
 
   // Home page
+  // Home page, category page
   > div {
     > h1 {
       @include relative-font-size(2);
@@ -170,6 +171,13 @@ body > main {
       h6 {
         @include relative-font-size(1.0625);
       }
+      
+      img {
+        display: block;
+        margin: 0 auto $spacing-unit / 2;
+      }
+
+      figcaption { text-align: center; }
     }
 
 
@@ -270,11 +278,6 @@ video {
 	max-width: 100%;
 	vertical-align: middle;
 }
-
-figure > img { margin: 0 auto; }
-figcaption { text-align: center; }
-
-.aligncenter { display: block; margin: 0 auto; }
 
 @media screen and (min-width: $on-small) {
   body > footer input[type="search"] { width: 50%; }

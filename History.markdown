@@ -19,7 +19,6 @@
 
   * Used Jekyll's base theme [minima](https://github.com/jekyll/minima) [head](https://github.com/jekyll/minima/commit/41b97699af658128fa9983e5312ca5516641f335)
   * Removed all CSS classes and styled using HTML elements only, except
-    * `.aligncenter` to center images in markdown through `[Link](https://){: .aligncenter }`
     * `.footnotes` to style footnotes, which are automatically created by kramdown if present in markdown
   * Removed Google Analytics for privacy reasons and replaced it with vanilla snippet pasting for privacy-friendlier solutions
   * Removed Dicscuss for privacy reasons
