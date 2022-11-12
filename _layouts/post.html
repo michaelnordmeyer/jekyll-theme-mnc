@@ -28,9 +28,11 @@ layout: default
           <dt>Reading time</dt><dd>{{ minutes }} minute{%- if minutes > 1 -%}s{%- endif %}</dd>
         </dl>
       </header>
+      
       <div itemprop="articleBody">
         {{ content }}
       </div>
-      <p><small>Subscribe to updates <a href="{{ '/feed.xml' | relative_url }}" rel="alternate">via RSS feed</a> or <a href="{{ '/feed.json' | relative_url }}" rel="alternate">via JSON feed</a></small></p>
+      
+      {% include feed-subscription.html %}
     </article>
   </main>

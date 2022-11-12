@@ -24,7 +24,7 @@ layout: default
       {% include post-list.html %}
         {%- endfor %}
 
-      <p><small>Subscribe to updates <a href="{{ '/feed.xml' | relative_url }}" rel="alternate">via RSS feed</a> or <a href="{{ '/feed.json' | relative_url }}" rel="alternate">via JSON feed</a></small></p>
+      {% include feed-subscription.html %}
       {%- endif %}
     </div>
   </main>

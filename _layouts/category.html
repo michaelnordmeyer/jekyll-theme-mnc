@@ -11,6 +11,8 @@ layout: default
         {%- for post in site.categories[title] %}
         {% include post-list.html %}
         {%- endfor %}
+
+      {% include feed-subscription.html %}
       {%- endif %}
     </div>
   </main>
