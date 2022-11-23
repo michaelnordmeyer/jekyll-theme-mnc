@@ -21,7 +21,7 @@ layout: default
         {% endif %}
         {%- assign date_format = site.jekyll-theme-mnc.date_format | default: "%b %-d, %Y" -%}
         {%- for post in posts %}
-      {% include post-list.html %}
+      {% include post-list-item.html %}
         {%- endfor %}
 
       {% include feed-subscription.html %}

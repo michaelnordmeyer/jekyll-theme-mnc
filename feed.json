@@ -1,7 +1,7 @@
 ---
-layout: none
 permalink: /feed.json
 sitemap: false
+layout: none
 ---
 {% assign posts_limit = site.feed.posts_limit | default: 10 %}
 {
