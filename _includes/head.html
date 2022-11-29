@@ -7,7 +7,7 @@
   <link type="application/json" rel="alternate" href="{{ '/feed.json' | relative_url }}" title="{{ site.title | escape }}">
   {% seo %}
   {%- if jekyll.environment == 'production' and site.jekyll-theme-mnc.analytics -%}
-    {%- include analytics.html -%}
-  {%- endif %}
+  {% include analytics.html %}
+  {%- endif -%}
   {% include custom-head.html %}
 </head>
