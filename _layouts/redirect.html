@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 <head>
   <meta name="robots" content="noindex,follow">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <title>Redirecting from {{ page.redirect.from | relative_url }} to {{ page.redirect.to | absolute_url }}</title>
   <meta name="description" content="Redirect page">
   <link rel="Shortcut Icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
