@@ -21,7 +21,6 @@
       {%- assign category_paths = site.categories | default: default_paths -%}
       {%- assign sorted_categories = site.categories | sort -%}
       {% for category in sorted_categories %}
-        <a itemprop="url" href="{{ site.baseurl }}/{{ site.jekyll-theme-mnc.category-slug}}/{{ category[0] | slugify }}">{{ category[0] | escape }}</a>
         <a itemprop="url" href="{{ site.baseurl }}/{{ site.jekyll-theme-mnc.category-slug}}/{{ category[0] | slugify }}" rel="nofollow">{{ category[0] | escape }}</a>
       {%- endfor %}
       </details>

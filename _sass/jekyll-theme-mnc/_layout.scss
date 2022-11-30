@@ -8,6 +8,19 @@ body > header {
   // Positioning context for the mobile navigation icon
   position: relative;
 
+  > div > a {
+    position: absolute;
+    left: 0;
+    top: 0;
+//    transform: translateY(-100%);
+//    transition: transform 0.3s;
+
+    & :focus {
+      transform: translateY(0%);
+      color: red;
+    }
+  }
+  
   & a,
   & a:visited {
     color: $site-title-color;
@@ -217,17 +230,6 @@ body > footer {
   border-top: 1px solid $border-color-01;
   padding: $spacing-unit 0;
 
-  h2 > a,
-  h2 > a:visited { color: $site-title-color; }
-  input[type="search"] {
-    width: 100%;
-    font-size: $base-font-size;
-    border: 1px solid $border-color-01;
-    background-color: $background-color;
-    color: $text-color;
-  }
-  input[type="submit"] { visibility: hidden; }
-
   * {
     color: $brand-color;
   }
@@ -235,6 +237,9 @@ body > footer {
   h2 {
     @include relative-font-size(1.125);
     margin-bottom: $spacing-unit / 2;
+
+    > a,
+    > a:visited { color: $site-title-color; }
 
     span {
       margin-left: $spacing-unit / 5;
@@ -261,6 +266,16 @@ body > footer {
   p {
     margin-bottom: $spacing-unit / 2;
   }
+
+  input[type="search"] {
+    width: 100%;
+    font-size: $base-font-size;
+    border: 1px solid $border-color-01;
+    background-color: $background-color;
+    color: $text-color;
+  }
+  
+  input[type="submit"] { visibility: hidden; }
 }
 
 
