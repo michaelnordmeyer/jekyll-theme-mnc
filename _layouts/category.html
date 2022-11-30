@@ -9,7 +9,7 @@ layout: default
       {%- if site.categories[title].size > 0 -%}
         {%- assign date_format = site.jekyll-theme-mnc.date_format | default: "%b %-d, %Y" -%}
         {%- for post in site.categories[title] %}
-        {% include post-list-item.html %}
+      {% include post-list-item.html %}
         {%- endfor %}
 
       {% include feed-subscription.html %}
