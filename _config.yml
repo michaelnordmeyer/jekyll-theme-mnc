@@ -58,7 +58,7 @@ jekyll-theme-mnc:
     - about.md
 
 # Build settings
-theme: jekyll-theme-mnc
+#theme: jekyll-theme-mnc
 
 plugins:
   - jekyll-feed
