@@ -7,8 +7,8 @@ layout: none
 {
   "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — {{ site.url }}/feed.json — and add it to your reader.",
   "version": "https://jsonfeed.org/version/1.1",
-  "title": {{ site.title | jsonify }},
-  "description": {{ site.description | jsonify }},
+  "title": {{ site.title | smartify | jsonify }},
+  "description": {{ site.description | smartify | jsonify }},
   "language": "{{ site.lang | default: 'en' }}",
   "home_page_url": "{{ site.url }}/",
   "feed_url": "{{ site.url }}/feed.json",
