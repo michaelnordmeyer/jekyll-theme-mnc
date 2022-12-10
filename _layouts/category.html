@@ -3,7 +3,7 @@ layout: default
 ---
 <main aria-label="Content">
     <div itemscope itemtype="https://schema.org/Blog">
-      <h3>Category: {{ page.title }} ({{ site.categories[page.title].size }})</h3>
+      <h3>Category: {{ page.title | smartify }} ({{ site.categories[page.title].size }})</h3>
 
       {%- assign title = page.title -%}
       {%- if site.categories[title].size > 0 -%}

@@ -1,8 +1,8 @@
   <footer>
     <h2>
-      <a href="/">{{ site.title | escape }}</a>
+      <a href="/">{{ site.title | smartify | escape }}</a>
       {% include social.html %}
     </h2>
-    <p>{{ site.author.bio | escape }}</p>
+    <p>{{ site.author.bio | smartify | escape }}</p>
     {% include search-duckduckgo.html %}
   </footer>
