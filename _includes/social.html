@@ -1,21 +1,62 @@
 {%- assign social = site.jekyll-theme-mnc.social_links -%}
+{%- assign icon_link = '/assets/jekyll-theme-mnc-social-icons.svg' -%}
 <span>
-        {% if social.devto -%}<a rel="me" href="https://dev.to/{{ social.devto | cgi_escape | escape }}" title="{{ social.devto | escape }} on DEV Community"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#devto' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.dribbble -%}<a rel="me" href="https://dribbble.com/{{ social.dribbble | cgi_escape | escape }}" title="{{ social.dribbble | escape }} on Dribbble"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#dribbble' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.facebook -%}<a rel="me" href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}" title="{{ social.facebook | escape }} on Facebook"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#facebook' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.flickr -%}<a rel="me" href="https://www.flickr.com/photos/{{ social.flickr | cgi_escape | escape }}" title="{{ social.flickr | escape }} on Flickr"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#flickr' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.github -%}<a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }} on GitHub"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#github' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% for glb in social.gitlab -%}{%- if glb.username and glb.instance -%}<a rel="me" href="https://{{ glb.instance | cgi_escape | escape}}/{{glb.username}}" title="{{ glb.username | escape }} on GitLab"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#gitlab' | relative_url }}"></use></svg></a>{%- endif -%}{% endfor %}
-        {% if social.instagram -%}<a rel="me" href="https://www.instagram.com/{{ social.instagram | cgi_escape | escape }}" title="{{ social.instagram | escape }} on Instagram"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#instagram' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.keybase -%}<a rel="me" href="https://keybase.io/{{ social.keybase | cgi_escape | escape }}" title="{{ social.keybase | escape }} on Keybase"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#keybase' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.linkedin -%}<a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }} on LinkedIn"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#linkedin' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.xing -%}<a rel="me" href="https://www.xing.com/profile/{{ social.xing | cgi_escape | escape }}" title="{{ social.xing | escape }} on XING"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#xing' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% for mst in social.mastodon -%}{%- if mst.username and mst.instance -%}<a rel="me" href="https://{{ mst.instance | cgi_escape | escape}}/@{{mst.username}}" title="{{ mst.username | escape }} on Mastodon"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#mastodon' | relative_url }}"></use></svg></a>{%- endif -%}{% endfor %}
-        {% if social.microdotblog -%}<a rel="me" href="https://micro.blog/{{ social.microdotblog | cgi_escape | escape }}" title="{{ social.microdotblog | escape }} on Micro.blog"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#microdotblog' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.pinterest -%}<a rel="me" href="https://www.pinterest.com/{{ social.pinterest | cgi_escape | escape }}" title="{{ social.pinterest | escape }} on Pinterest"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#pinterest' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.stackoverflow -%}<a rel="me" href="https://stackoverflow.com/users/{{ social.stackoverflow | cgi_escape | escape }}" title="{{ social.stackoverflow | escape }} on Stack Overflow"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#stackoverflow' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.telegram -%}<a rel="me" href="https://t.me/{{ social.telegram | cgi_escape | escape }}" title="{{ social.telegram | escape }} on Telegram"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#telegram' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.twitter -%}<a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }} on Twitter"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#twitter' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.youtube -%}<a rel="me" href="https://www.youtube.com/{{ social.youtube | cgi_escape | escape }}" title="{{ social.youtube | escape }} on YouTube"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#youtube' | relative_url }}"></use></svg></a>{%- endif -%}
-        {% if social.youtube_channel -%}<a rel="me" href="https://www.youtube.com/channel/{{ social.youtube_channel | cgi_escape | escape }}" title="{{ social.youtube_channel_name | escape | default: 'YouTube' }} as a YouTube Channel"><svg><use xlink:href="{{ '/assets/jekyll-theme-mnc-social-icons.svg#youtube' | relative_url }}"></use></svg></a>{%- endif %}
+        {%- if social.devto %}
+        <a rel="me" href="https://dev.to/{{ social.devto | cgi_escape | escape }}" title="{{ social.devto | escape }} on DEV Community"><svg><use xlink:href="{{ icon_link | relative_url }}#devto"></use></svg></a>
+        {%- endif -%}
+        {% if social.dribbble %}
+        <a rel="me" href="https://dribbble.com/{{ social.dribbble | cgi_escape | escape }}" title="{{ social.dribbble | escape }} on Dribbble"><svg><use xlink:href="{{ icon_link | relative_url }}#dribbble"></use></svg></a>
+        {%- endif -%}
+        {% if social.facebook %}
+        <a rel="me" href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}" title="{{ social.facebook | escape }} on Facebook"><svg><use xlink:href="{{ icon_link | relative_url }}#facebook"></use></svg></a>
+        {%- endif -%}
+        {% if social.flickr %}
+        <a rel="me" href="https://www.flickr.com/photos/{{ social.flickr | cgi_escape | escape }}" title="{{ social.flickr | escape }} on Flickr"><svg><use xlink:href="{{ icon_link | relative_url }}#flickr"></use></svg></a>
+        {%- endif -%}
+        {% if social.github %}
+        <a rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }} on GitHub"><svg><use xlink:href="{{ icon_link | relative_url }}#github"></use></svg></a>
+        {%- endif -%}
+        {%- for gitlab in social.gitlab -%}
+        {% if gitlab.username and gitlab.instance %}
+        <a rel="me" href="https://{{ gitlab.instance | cgi_escape | escape}}/{{gitlab.username}}" title="{{ gitlab.username | escape }} on GitLab"><svg><use xlink:href="{{ icon_link | relative_url }}#gitlab"></use></svg></a>
+        {%- endif -%}
+        {%- endfor -%}
+        {% if social.instagram %}
+        <a rel="me" href="https://www.instagram.com/{{ social.instagram | cgi_escape | escape }}" title="{{ social.instagram | escape }} on Instagram"><svg><use xlink:href="{{ icon_link | relative_url }}#instagram"></use></svg></a>
+        {%- endif -%}
+        {% if social.keybase %}
+        <a rel="me" href="https://keybase.io/{{ social.keybase | cgi_escape | escape }}" title="{{ social.keybase | escape }} on Keybase"><svg><use xlink:href="{{ icon_link | relative_url }}#keybase"></use></svg></a>
+        {%- endif -%}
+        {% if social.linkedin %}
+        <a rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }} on LinkedIn"><svg><use xlink:href="{{ icon_link | relative_url }}#linkedin"></use></svg></a>
+        {%- endif -%}
+        {% if social.xing %}
+        <a rel="me" href="https://www.xing.com/profile/{{ social.xing | cgi_escape | escape }}" title="{{ social.xing | escape }} on XING"><svg><use xlink:href="{{ icon_link | relative_url }}#xing"></use></svg></a>
+        {%- endif -%}
+        {%- for mastodon in social.mastodon -%}
+        {% if mastodon.username and mastodon.instance %}
+        <a rel="me" href="https://{{ mastodon.instance | cgi_escape | escape}}/@{{mastodon.username}}" title="{{ mastodon.username | escape }} on Mastodon"><svg><use xlink:href="{{ icon_link | relative_url }}#mastodon"></use></svg></a>
+        {%- endif -%}
+        {%- endfor -%}
+        {% if social.microdotblog %}
+        <a rel="me" href="https://micro.blog/{{ social.microdotblog | cgi_escape | escape }}" title="{{ social.microdotblog | escape }} on Micro.blog"><svg><use xlink:href="{{ icon_link | relative_url }}#microdotblog"></use></svg></a>
+        {%- endif -%}
+        {% if social.pinterest %}
+        <a rel="me" href="https://www.pinterest.com/{{ social.pinterest | cgi_escape | escape }}" title="{{ social.pinterest | escape }} on Pinterest"><svg><use xlink:href="{{ icon_link | relative_url }}#pinterest"></use></svg></a>
+        {%- endif -%}
+        {% if social.stackoverflow %}
+        <a rel="me" href="https://stackoverflow.com/users/{{ social.stackoverflow | cgi_escape | escape }}" title="{{ social.stackoverflow | escape }} on Stack Overflow"><svg><use xlink:href="{{ icon_link | relative_url }}#stackoverflow"></use></svg></a>
+        {%- endif -%}
+        {% if social.telegram %}
+        <a rel="me" href="https://t.me/{{ social.telegram | cgi_escape | escape }}" title="{{ social.telegram | escape }} on Telegram"><svg><use xlink:href="{{ icon_link | relative_url }}#telegram"></use></svg></a>
+        {%- endif -%}
+        {% if social.twitter %}
+        <a rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }} on Twitter"><svg><use xlink:href="{{ icon_link | relative_url }}#twitter"></use></svg></a>
+        {%- endif -%}
+        {% if social.youtube %}
+        <a rel="me" href="https://www.youtube.com/{{ social.youtube | cgi_escape | escape }}" title="{{ social.youtube | escape }} on YouTube"><svg><use xlink:href="{{ icon_link | relative_url }}#youtube"></use></svg></a>
+        {%- endif -%}
+        {% if social.youtube_channel %}
+        <a rel="me" href="https://www.youtube.com/channel/{{ social.youtube_channel | cgi_escape | escape }}" title="{{ social.youtube_channel_name | escape | default: 'YouTube' }} as a YouTube Channel"><svg><use xlink:href="{{ icon_link | relative_url }}#youtube"></use></svg></a>
+        {%- endif %}
       </span>
