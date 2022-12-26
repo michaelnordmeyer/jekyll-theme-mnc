@@ -7,7 +7,7 @@ layout: default
         {% if page.image -%}
         <img itemprop="image" src="{{ page.image }}" alt="Header image">
         {%- endif %}
-        <h1 itemprop="headline">{{ page.title | escape }}</h1>
+        <h1 itemprop="headline">{{ page.title | smartify | escape }}</h1>
         <dl>
           {% assign date_format = site.jekyll-theme-mnc.date_format | default: "%b %-d, %Y" -%}
           <dt>Published</dt><dd><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time></dd>
@@ -33,6 +33,10 @@ layout: default
         {{ content }}
       </div>
       
+      {% if page.tumblelog_type %}
+      {% include tumblelog-feed-subscription.html %}
+      {%- else %}
       {% include feed-subscription.html %}
+      {%- endif %}
     </article>
   </main>
