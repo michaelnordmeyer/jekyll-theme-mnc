@@ -125,7 +125,7 @@ body > main {
         content: " • ";
       }
 
-      > header > p {}
+      > header > time {}
 
       > header > h2 {
         @include relative-font-size(1.5);
@@ -240,7 +240,7 @@ body > main {
     margin-bottom: calc($spacing-unit / 2);
   }
 
-  article > header > p,
+  article > header > time,
   article > header > dl {
     font-size: $small-font-size;
     color: $brand-color;

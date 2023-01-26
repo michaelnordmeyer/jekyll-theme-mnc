@@ -1,6 +1,6 @@
 <article>
         <header>
-          <p>{{ post.date | date: date_format }}</p>
+          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: date_format }}</time>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title | smartify | escape }}</a></h2>
         </header>
         {% if site.show_excerpts -%}
