@@ -23,7 +23,7 @@ layout: none
   "expired": false,
   "items": [{% for post in site.posts limit: posts_limit %}
     {
-      "id": "{{ post.id }}",
+      "id": "{{ post.url | absolute_url }}",
       "url": "{{ post.url | absolute_url }}",
       "title": {{ post.title | smartify | jsonify }},
       "date_published": "{{ post.date | date_to_xmlschema }}",
@@ -37,7 +37,7 @@ layout: none
       {%- endif %}
       "language": "{{ post.lang | default: site.lang | default: 'en' }}",
       "summary": {% if post.excerpt %}{{ post.excerpt | smartify | jsonify }}{% else %}{{ post.description | smartify | jsonify }}{% endif %},{% if post.image %}
-      "image": "{{ post.image }}",{% endif %}
+      "image": "{{ post.image | absolute_url }}",{% endif %}
       "content_html": {{ post.content | smartify | jsonify }}
     }{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
