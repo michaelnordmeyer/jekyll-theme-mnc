@@ -21,7 +21,7 @@ layout: none
     }
   ],
   "expired": false,
-  "items": [{% for post in site.posts limit: posts_limit %}
+  "items": [{% for post in site.posts limit: posts_limit | default: 10 %}
     {
       "id": "{{ post.url | absolute_url }}",
       "url": "{{ post.url | absolute_url }}",
