@@ -220,6 +220,7 @@ A header image is displayed before the title on the post page, if `image` is add
 ```yaml
 ---
 image: /images/sample-image.jpg
+image_alt: A description of the image
 ---
 ```
 

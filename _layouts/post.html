@@ -5,7 +5,7 @@ layout: default
     <article itemscope itemtype="https://schema.org/BlogPosting">
       <header>
         {% if page.image -%}
-        <img itemprop="image" src="{{ page.image }}" alt="Header image">
+        <img itemprop="image" src="{{ page.image }}" alt="{{ page.image_alt }}">
         {%- endif %}
         <h1 itemprop="headline">{{ page.title | smartify | escape }}</h1>
         <dl>
@@ -28,11 +28,11 @@ layout: default
           <dt>Reading time</dt><dd>{{ minutes }} minute{%- if minutes > 1 -%}s{%- endif %}</dd>
         </dl>
       </header>
-      
+
       <div itemprop="articleBody">
         {{ content }}
       </div>
-      
+
       {% if page.tumblelog_type %}
       {% include tumblelog-feed-subscription.html %}
       {%- else %}
