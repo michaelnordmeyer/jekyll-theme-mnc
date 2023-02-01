@@ -22,7 +22,7 @@ layout: none
   ],
   "expired": false,
   "items": [{% assign tumblelog_posts = site.posts | where_exp: "post", "post.tumblelog_type == 'Post' or post.tumblelog_type == 'Image' or post.tumblelog_type == 'Video'" %}
-    {% for post in tumblelog_posts limit: posts_limit | default: 10 %}
+    {% for post in tumblelog_posts limit: posts_limit %}
     {
       "id": "{{ post.url | absolute_url }}",
       "url": "{{ post.url | absolute_url }}",
