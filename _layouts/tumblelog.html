@@ -13,7 +13,7 @@ layout: default
         {% if post.image -%}
         <img itemprop="image" src="{{ post.image }}" alt="Header image">
         {%- endif %}
-        <h2 itemprop="headline">{{ post.title | smartify | escape }}</h2>
+        <h2 itemprop="headline">{{ post.title | smartify }}</h2>
         <dl>
           <dt>Published</dt><dd><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: date_format }}</time></dd>
           {%- if post.last_modified_at -%}
@@ -27,7 +27,7 @@ layout: default
           {%- endif %}
         </dl>
       </header>
-    
+
       <div itemprop="articleBody">
         {{ post.content }}
       </div>

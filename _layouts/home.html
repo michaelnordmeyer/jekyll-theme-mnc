@@ -4,7 +4,7 @@ layout: default
 <main aria-label="Content">
     <div itemscope itemtype="https://schema.org/Blog">
       {% if page.title -%}
-      <h1>{{ page.title | smartify | escape }}</h1>
+      <h1>{{ page.title | smartify }}</h1>
       {%- endif %}
 
       {{ content }}
@@ -17,7 +17,7 @@ layout: default
 
       {%- if posts.size > 0 -%}
         {%- if page.list_title %}
-      <h3>{{ page.list_title | smartify | escape }}</h3>
+      <h3>{{ page.list_title | smartify }}</h3>
         {% endif %}
         {%- assign date_format = site.jekyll-theme-mnc.date_format | default: "%b %-d, %Y" -%}
         {%- for post in posts %}

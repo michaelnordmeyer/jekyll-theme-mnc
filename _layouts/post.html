@@ -7,7 +7,7 @@ layout: default
         {% if page.image -%}
         <img itemprop="image" src="{{ page.image }}" alt="{{ page.image_alt }}">
         {%- endif %}
-        <h1 itemprop="headline">{{ page.title | smartify | escape }}</h1>
+        <h1 itemprop="headline">{{ page.title | smartify }}</h1>
         <dl>
           {% assign date_format = site.jekyll-theme-mnc.date_format | default: "%b %-d, %Y" -%}
           <dt>Published</dt><dd><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time></dd>

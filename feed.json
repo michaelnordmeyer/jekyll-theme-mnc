@@ -25,7 +25,7 @@ layout: none
     {
       "id": "{{ post.url | absolute_url }}",
       "url": "{{ post.url | absolute_url }}",
-      "title": {{ post.title | smartify | jsonify }},
+      "title": {{ post.title | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }},
       "date_published": "{{ post.date | date_to_xmlschema }}",
       "date_modified": "{{ post.last_modified_at | default: post.date | date_to_xmlschema }}",
       {%- if post.author %}
@@ -36,9 +36,9 @@ layout: none
       ],
       {%- endif %}
       "language": "{{ post.lang | default: site.lang | default: 'en' }}",
-      "summary": {% if post.excerpt %}{{ post.excerpt | smartify | jsonify }}{% else %}{{ post.description | smartify | jsonify }}{% endif %},{% if post.image %}
+      "summary": {% if post.excerpt %}{{ post.excerpt | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }}{% else %}{{ post.description | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }}{% endif %},{% if post.image %}
       "image": "{{ post.image | absolute_url }}",{% endif %}
-      "content_html": {{ post.content | smartify | jsonify }}
+      "content_html": {{ post.content | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }}
     }{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
 }

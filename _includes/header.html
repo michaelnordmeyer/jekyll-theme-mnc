@@ -2,7 +2,8 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.jekyll-theme-mnc.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size %}
-    <h2><a rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h2>
+    <a href="#content">Skip to content</a>
+    <h2><a rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></h2>
 
     {%- if titles_size > 0 %}
     <nav aria-label="Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
@@ -15,13 +16,13 @@
       {% for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
         {%- if my_page.title %}
-        <a itemprop="url" href="{{ my_page.url | relative_url }}">{{ my_page.title | smartify | escape }}</a>
+        <a itemprop="url" href="{{ my_page.url | relative_url }}">{{ my_page.title | smartify }}</a>
         {%- endif -%}
       {%- endfor %}
       {%- assign category_paths = site.categories | default: default_paths -%}
       {%- assign sorted_categories = site.categories | sort -%}
       {% for category in sorted_categories %}
-        <a itemprop="url" href="{{ site.baseurl }}/{{ site.jekyll-theme-mnc.category-slug}}/{{ category[0] | slugify }}" rel="nofollow">{{ category[0] | smartify | escape }}</a>
+        <a itemprop="url" href="{{ site.baseurl }}/{{ site.jekyll-theme-mnc.category-slug}}/{{ category[0] | slugify }}" rel="nofollow">{{ category[0] | smartify }}</a>
       {%- endfor %}
       </details>
     </nav>

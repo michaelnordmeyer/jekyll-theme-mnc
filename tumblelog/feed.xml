@@ -55,7 +55,7 @@ layout: none
     {%- assign posts = posts | where_exp: "post", "post.draft != true" -%}
   {%- endunless -%}
   {%- assign posts = posts | sort: "date" | reverse -%}
-  {% assign tumblelog_posts = posts | where_exp: "item", "item.tumblelog_type == 'Post' or item.tumblelog_type == 'Image' or item.tumblelog_type == 'Video'" %}
+  {% assign tumblelog_posts = posts | where_exp: "post", "post.tumblelog_type == 'Post' or post.tumblelog_type == 'Image' or post.tumblelog_type == 'Video'" %}
   {%- assign posts_limit = site.feed.posts_limit | default: 10 -%}
   {%- for post in tumblelog_posts limit: posts_limit %}
   <entry{% if post.lang %}{{" "}}xml:lang="{{ post.lang }}"{% endif %}>
