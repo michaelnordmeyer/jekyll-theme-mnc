@@ -3,7 +3,7 @@ permalink: /tumblelog/feed.json
 sitemap: false
 layout: none
 ---
-{% assign posts_limit = site.feed.posts_limit | default: 10 %}
+{%- assign posts_limit = site.feed.posts_limit | default: 10 -%}
 {
   "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — {{ site.url }}/feed.json — and add it to your reader.",
   "version": "https://jsonfeed.org/version/1.1",
@@ -21,7 +21,7 @@ layout: none
     }
   ],
   "expired": false,
-  "items": [{% assign tumblelog_posts = site.posts | where_exp: "post", "post.tumblelog_type == 'Post' or post.tumblelog_type == 'Image' or post.tumblelog_type == 'Video'" %}
+  "items": [{%- assign tumblelog_posts = site.posts | where_exp: "post", "post.tumblelog_type == 'Post' or post.tumblelog_type == 'Image' or post.tumblelog_type == 'Video'" -%}
     {% for post in tumblelog_posts limit: posts_limit %}
     {
       "id": "{{ post.url | absolute_url }}",
@@ -37,6 +37,27 @@ layout: none
       ],
       {%- endif %}
       "language": "{{ post.lang | default: site.lang | default: 'en' }}",
+      {%- if post.category -%}
+        {%- assign categories_and_tags = "'" | append: post.category | append: "'" -%}
+      {%- elsif post.categories -%}
+        {%- for category in post.categories -%}
+          {%- assign categories_and_tags = categories_and_tags | append: "'" | append: category | append: "'" -%}
+          {%- unless forloop.last -%}
+            {%- assign categories_and_tags = categories_and_tags | append: ", " -%}
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endif -%}
+      {%- for tag in post.tags -%}
+        {%- unless post.categories contains tag -%}
+          {%- if categories_and_tags -%}
+            {%- assign categories_and_tags = categories_and_tags | append: ", " -%}
+          {%- endif -%}
+          {%- assign categories_and_tags = categories_and_tags | append: "'" | append: tag | append: "'" -%}
+      {%- endunless -%}
+      {%- endfor -%}
+      {%- if categories_and_tags %}
+      "tags": [{{ categories_and_tags }}]
+      {%- endif %}
       "summary": {% if post.excerpt %}{{ post.excerpt | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }}{% else %}{{ post.description | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }}{% endif %},{% if post.image %}
       "image": "{{ post.image | absolute_url }}",{% endif %}
       "content_html": {{ post.content | smartify | jsonify }}
