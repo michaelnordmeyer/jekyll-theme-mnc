@@ -173,6 +173,7 @@ For categories to be properly linked, the site needs a `category` folder having 
 ```yaml
 ---
 title: "First"
+excerpt: A description for the head's meta description tag created by jekyll-seo-tag
 permalink: /category/first
 sitemap: false
 layout: category
@@ -186,7 +187,7 @@ jekyll-theme-mnc:
   category-slug: category
 ```
  
-Used categories will be included automatically in the navigation menu after ordinary pages, which are declared with `header_pages` (see below). Spaces will be automatically converted to hypens, so the above permalink has to mirror this.
+Used categories will be included automatically in the navigation menu after ordinary pages, which are declared with `header_pages` (see below). Spaces will be automatically converted to hyphens, so the above permalink has to mirror this.
 
 ### Customize navigation links
 
@@ -211,6 +212,14 @@ in `_config.yml`.
 # Refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 jekyll-theme-mnc:
   date_format: "%Y-%m-%d"
+```
+
+### Favicon Support for Feeds
+
+You can declare an icon for the tumblelog in `_config.yml`.
+
+```yaml
+tumblelog_icon: /icon.png
 ```
 
 ### Header Image Support
