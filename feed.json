@@ -7,13 +7,15 @@ layout: none
 {
   "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — {{ site.url }}/feed.json — and add it to your reader.",
   "version": "https://jsonfeed.org/version/1.1",
-  "title": {{ site.title | smartify | jsonify }},
-  "description": {{ site.description | smartify | jsonify }},
-  "language": "{{ site.lang | default: 'en' }}",
+  "title": {{ site.title | strip_html | normalize_whitespace | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }},
+  "description": {{ site.description | strip_html | normalize_whitespace | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }},
+  "language": "{{ site.lang | default: 'en-US' }}",
   "home_page_url": "{{ site.url }}/",
   "feed_url": "{{ site.url }}/feed.json",
-  "icon": "{{ site.url }}/icon.png",
-  "favicon": "{{ site.url }}/icon.png",
+  {%- if site.icon %}
+  "icon": "{{ site.icon | absolute_url }}",
+  "favicon": "{{ site.icon | absolute_url }}",
+  {% endif -%}
   "authors": [
     {
       "name": "{{ site.author.name }}",
@@ -21,11 +23,11 @@ layout: none
     }
   ],
   "expired": false,
-  "items": [{%- for post in site.posts limit: posts_limit -%}
+  "items": [{% for post in site.posts limit: posts_limit %}
     {
       "id": "{{ post.url | absolute_url }}",
       "url": "{{ post.url | absolute_url }}",
-      "title": {{ post.title | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }},
+      "title": {{ post.title | strip_html | normalize_whitespace | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }},
       "date_published": "{{ post.date | date_to_xmlschema }}",
       "date_modified": "{{ post.last_modified_at | default: post.date | date_to_xmlschema }}",
       {%- if post.author %}
@@ -35,12 +37,12 @@ layout: none
         }{% unless forloop.last %},{% endunless %}{% endfor %}
       ],
       {%- endif %}
-      "language": "{{ post.lang | default: site.lang | default: 'en' }}",
+      "language": "{{ post.lang | default: site.lang | default: 'en-US' }}",
       {%- if post.category -%}
-        {%- assign categories_and_tags = "'" | append: post.category | append: "'" -%}
+        {%- assign categories_and_tags = '"' | append: post.category | append: '"' -%}
       {%- elsif post.categories -%}
         {%- for category in post.categories -%}
-          {%- assign categories_and_tags = categories_and_tags | append: "'" | append: category | append: "'" -%}
+          {%- assign categories_and_tags = categories_and_tags | append: '"' | append: category | append: '"' -%}
           {%- unless forloop.last -%}
             {%- assign categories_and_tags = categories_and_tags | append: ", " -%}
           {%- endunless -%}
@@ -51,15 +53,20 @@ layout: none
           {%- if categories_and_tags -%}
             {%- assign categories_and_tags = categories_and_tags | append: ", " -%}
           {%- endif -%}
-          {%- assign categories_and_tags = categories_and_tags | append: "'" | append: tag | append: "'" -%}
+          {%- assign categories_and_tags = categories_and_tags | append: '"' | append: tag | append: '"' -%}
         {%- endunless -%}
       {%- endfor -%}
       {%- if categories_and_tags %}
       "tags": [{{ categories_and_tags }}],
         {%- assign categories_and_tags = nil -%}
       {%- endif %}
-      "summary": {% if post.excerpt %}{{ post.excerpt | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }}{% else %}{{ post.description | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }}{% endif %},{% if post.image %}
-      "image": "{{ post.image | absolute_url }}",{% endif %}
+      {%- assign post_summary = post.description | default: post.excerpt -%}
+      {%- if post_summary and post_summary != empty %}
+      "summary": {{ post_summary | strip_html | normalize_whitespace | smartify | replace: "&amp;", "&" | replace: "&lt;", "<" | replace: "&gt;", ">" | jsonify }},
+      {%- endif -%}
+      {%- if post.image %}
+      "image": "{{ post.image | absolute_url }}",
+      {%- endif %}
       "content_html": {{ post.content | smartify | jsonify }}
     }{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
