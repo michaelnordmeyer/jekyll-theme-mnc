@@ -8,9 +8,7 @@
 
 [Theme preview](https://jekyll-theme-mnc.michaelnordmeyer.com)
 
-![jekyll-theme-mnc theme preview light](/screenshot-light.png)
-
-![jekyll-theme-mnc theme preview dark](/screenshot-dark.png)
+![jekyll-theme-mnc theme preview](/screenshot.png)
 
 **Note:** Paging is not supported, which means all posts are displayed on the home page.
 
