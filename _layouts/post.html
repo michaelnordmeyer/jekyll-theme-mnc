@@ -5,7 +5,7 @@ layout: default
     <article itemscope itemtype="https://schema.org/BlogPosting">
       <header>
         {% if page.image -%}
-        <img itemprop="image" src="{{ page.image }}" alt="{{ page.image_alt }}">
+        <img itemprop="image" src="{{ page.image }}" alt="{{ page.image_alt }}" title="{{ page.image_title }}">
         {%- endif %}
         <h1 itemprop="headline">{{ page.title | smartify }}</h1>
         <dl>

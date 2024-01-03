@@ -39,7 +39,7 @@ Refers to files within the `_layouts` directory, that define the markup for your
 
 `home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page.
 
-##### Main Heading and Content-injection
+##### Main Heading and Content Injection
 
 The *home* layout will inject all content from your `index.md` / `index.html` *before* the `Posts` heading. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. *We recommended that you title this section with a Heading2 (`##`)*.
 
@@ -168,7 +168,7 @@ categories: [First, Second, "My Third"]
 
 #### Category navigation links
 
-For categories to be properly linked, the site needs a `category` folder having separate markdown files for each category. E.g. a file called `first.md` in `category` with the following content:
+For categories to be properly linked, the site needs a `category` folder having separate markdown files for each category. E.g. for the category "first" a file called `first.md` in `category` with the following content:
 
 ```yaml
 ---
@@ -180,13 +180,13 @@ layout: category
 ---
 ```
 
-The title and permalink have to match the corresponding filename and category name. The category slug `category`in e.g. `https://example.com/category/first` is user-configurable in `_config.yaml`:
+The title and permalink have to match the corresponding filename and category name. The category slug `category` in e.g. `https://example.com/category/first` is user-configurable in `_config.yaml`:
 
 ```yaml
 jekyll-theme-mnc:
-  category-slug: category
+  category_slug: category
 ```
- 
+
 Used categories will be included automatically in the navigation menu after ordinary pages, which are declared with `header_pages` (see below). Spaces will be automatically converted to hyphens, so the above permalink has to mirror this.
 
 ### Customize navigation links
@@ -224,14 +224,17 @@ tumblelog_icon: /icon.png
 
 ### Header Image Support
 
-A header image is displayed before the title on the post page, if `image` is added to the post's frontmatter.
+A header image is displayed before the title on posts and pages, if `image` is added to the file's frontmatter.
 
 ```yaml
 ---
 image: /images/sample-image.jpg
-image_alt: A description of the image
+image_alt: The description of the image
+image_title: The title of the image
 ---
 ```
+
+This image is also used in feeds and SEO tags as the displayed image.
 
 ### Extending the `<head />`
 
@@ -303,7 +306,7 @@ Analytics will only appear in production, i.e., not while testing the site on yo
 
 ### Enabling Excerpts on the Home Page
 
-To display post-excerpts on the Home Page, simply add the following to your `_config.yml`:
+To display post excerpts on the home page, simply add the following to your `_config.yml`:
 
 ```yaml
 show_excerpts: true

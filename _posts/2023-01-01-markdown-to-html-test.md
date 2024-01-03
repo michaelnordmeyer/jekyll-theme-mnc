@@ -102,7 +102,7 @@ This tag shows **bold** text.
 
 ## HTML5 Tags Supported by Github-Flavored Markdown
 
-### Tables (But Without the Caption)
+### Tables (Without Caption)
 
 | Character                                                                      | Appearance |
 | ------------------------------------------------------------------------------ | ----------:|
