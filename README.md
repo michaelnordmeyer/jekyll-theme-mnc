@@ -1,14 +1,14 @@
-# jekyll-theme-mnc
+# MNC
 
-*jekyll-theme-mnc is a one-size-fits-all Jekyll theme for writers, and is based on [minima](https://github.com/jekyll/minima), but uses a classless approach*.
+*MNC is a one-size-fits-all Jekyll theme for writers, and is based on [minima](https://github.com/jekyll/minima), but uses a classless approach*.
 
-**Disclaimer:** The information here may vary depending on the version you're using. Please refer to the `README.md` bundled within the theme-gem for information specific to your version or by pointing your browser to the Git tag corresponding to your version. e.g. https://github.com/michaelnordmeyer/jekyll-theme-mnc/blob/v1.0/README.md*
+**Disclaimer:** The information here may vary depending on the version you're using. Please refer to the `README.md` bundled within the theme-gem for information specific to your version or by pointing your browser to the Git tag corresponding to your version. e.g. https://github.com/michaelnordmeyer/jekyll-theme-mnc/blob/v1.0.0/README.md*
 
 *Running `bundle show jekyll-theme-mnc` will provide you with the local path to your current theme version.*
 
-[Theme preview](https://jekyll-theme-mnc.michaelnordmeyer.com)
+[Theme demo](https://jekyll-theme-mnc.michaelnordmeyer.com)
 
-![jekyll-theme-mnc theme preview](/screenshot.png)
+![MNC Screenshot](/screenshot.png)
 
 **Note:** Paging is not supported, which means all posts are displayed on the home page.
 
@@ -59,7 +59,7 @@ Refers to snippets of code within the `_includes` directory that can be inserted
   - `head.html` – Code-block that defines the `<head></head>` in *default* layout.
   - `header.html` – Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
   - `search-duckduckgo.html` – Renders DuckDuckGo custom search.
-  - `social.html` – Renders social-media icons based on the `jekyll-theme-mnc:social_links` data in the config file.
+  - `social.html` – Renders social-media icons based on the `jekyll-theme-mnc.social_links` data in the config file.
 
 ### Sass
 
@@ -86,7 +86,7 @@ Refers to various asset files within the `assets` directory.
 
 ### Plugins
 
-jekyll-theme-mnc comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
+MNC comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
 
 ## Usage
 
@@ -98,9 +98,9 @@ theme: jekyll-theme-mnc
 
 ### Customizing templates
 
-To override the default structure and style of jekyll-theme-mnc, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
+To override the default structure and style of MNC, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
 
-e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from jekyll-theme-mnc gem folder to `<yoursite>/_includes` and start editing that file.
+e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from MNC gem folder to `<yoursite>/_includes` and start editing that file.
 
 The site's default CSS has now moved to a new place within the gem itself, [`assets/css/style.scss`](assets/css/style.scss).
 
@@ -125,7 +125,7 @@ Therefore, your `assets/css/style.scss` should contain the following at minimum:
 
 #### Skins
 
-jekyll-theme-mnc supports defining and switching between multiple color-palettes (or *skins*).
+MNC supports defining and switching between multiple color-palettes (or *skins*).
 
 ```
 .
@@ -136,7 +136,7 @@ jekyll-theme-mnc supports defining and switching between multiple color-palettes
 
 A skin is a Sass file placed in the directory `_sass/jekyll-theme-mnc/skins` and it defines the variable defaults related to the "color" aspect of the theme. It also embeds the Sass rules related to syntax-highlighting since that is primarily related to color and has to be adjusted in harmony with the current skin.
 
-The default color palette for jekyll-theme-mnc is defined within `_sass/jekyll-theme-mnc/skins/classic.scss`. To switch to another available skin, simply declare it in the site's config file. For example, to activate `_sass/jekyll-theme-mnc/skins/dark.scss` as the skin, the setting would be:
+The default color palette for MNC is defined within `_sass/jekyll-theme-mnc/skins/classic.scss`. To switch to another available skin, simply declare it in the site's config file. For example, to activate `_sass/jekyll-theme-mnc/skins/dark.scss` as the skin, the setting would be:
 
 ```yaml
 jekyll-theme-mnc:
@@ -206,8 +206,7 @@ You can change the default date format by specifying `site.jekyll-theme-mnc.date
 in `_config.yml`.
 
 ```yaml
-# jekyll-theme-mnc date format
-# Refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+# Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 jekyll-theme-mnc:
   date_format: "%Y-%m-%d"
 ```
@@ -293,7 +292,7 @@ jekyll-theme-mnc:
 
 To enable analytics, you will need a third-party analytics account. Follow their instructions of how to get their code snippet, which has to be added to your site. Copy this snippet and paste it into `analytics.html` in folder `_includes`.
 
-To enable this in jekyll-theme-mnc, add the following lines to your Jekyll site to turn analytics processing on:
+To enable this in MNC, add the following lines to your Jekyll site to turn analytics processing on:
 
 ```yaml
 jekyll-theme-mnc:
@@ -320,7 +319,7 @@ reading-speed: 180
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/michaelnordmeyer/jekyll-theme-mnc. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/michaelnordmeyer/jekyll-theme-mnc. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 
 ## Development
 
@@ -330,4 +329,4 @@ To test your theme, run `script/server` (or `bundle exec jekyll serve`) and open
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

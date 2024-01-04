@@ -13,13 +13,12 @@ Gem::Specification.new do |spec|
   spec.metadata["plugin_type"] = "theme"
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r!^(assets|_(includes|layouts|sass)/|(LICENSE|README)((\.(txt|md|markdown)|$)))!i)
+    f.match(%r!^(assets|_(data|includes|layouts|sass)/|(CODE_OF_CONDUCT|LICENSE|README)((\.(txt|md|markdown)|$)))!i)
   end
 
-  spec.add_runtime_dependency "jekyll", ">= 3.9", "< 5.0"
-  spec.add_runtime_dependency "jekyll-feed", "~> 0.15.1"
-  spec.add_runtime_dependency "jekyll-redirect-from", "~> 0.16.0"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8.0"
-
-  spec.add_development_dependency "bundler"
+  spec.add_runtime_dependency "jekyll", ">= 3.9.3", "< 5.0"
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.17"
+  spec.add_runtime_dependency "jekyll-include-cache", "~> 0.2"
+  spec.add_runtime_dependency "jekyll-redirect-from", "~> 0.16"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
 end
