@@ -1,4 +1,4 @@
-# MNC
+# Jekyll Theme MNC
 
 *MNC is a one-size-fits-all Jekyll theme for writers, and is based on [minima](https://github.com/jekyll/minima), but uses a classless approach and adds an optional tumblelog*.
 
