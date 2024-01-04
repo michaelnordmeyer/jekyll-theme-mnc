@@ -100,7 +100,7 @@ body > main {
 
     > p {}
 
-    > h3 {
+    > h2 {
       @include relative-font-size(1.75);
       margin-bottom: 0;
     }
@@ -127,7 +127,7 @@ body > main {
 
       > header > time {}
 
-      > header > h2 {
+      > header > h3 {
         @include relative-font-size(1.5);
         margin-bottom: 1px;
         line-height: 1.2;
