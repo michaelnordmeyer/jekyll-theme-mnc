@@ -2,9 +2,7 @@
 
 *MNC is a one-size-fits-all Jekyll theme for writers, and is based on [minima](https://github.com/jekyll/minima), but uses a classless approach and adds an optional tumblelog*.
 
-**Disclaimer:** The information here may vary depending on the version you're using. Please refer to the `README.md` bundled within the theme-gem for information specific to your version or by pointing your browser to the Git tag corresponding to your version. e.g. https://github.com/michaelnordmeyer/jekyll-theme-mnc/blob/v1.0.0/README.md*
-
-*Running `bundle show jekyll-theme-mnc` will provide you with the local path to your current theme version.*
+**Disclaimer:** The information here may vary depending on the version you're using. Please refer to the `README.md` bundled within the theme-gem for information specific to your version or by pointing your browser to the Git tag corresponding to your version. e.g. `https://github.com/michaelnordmeyer/jekyll-theme-mnc/blob/v1.0.0/README.md`. Running `bundle show jekyll-theme-mnc` will provide you with the local path to your current theme version.
 
 [Theme demo](https://jekyll-theme-mnc.michaelnordmeyer.com)
 
