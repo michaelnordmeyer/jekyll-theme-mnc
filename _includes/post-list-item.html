@@ -1,7 +1,7 @@
 <article>
         <header>
           <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: date_format }}</time>
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title | smartify }}</a></h2>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | smartify }}</a></h3>
         </header>
         {% if site.show_excerpts -%}
         <p>

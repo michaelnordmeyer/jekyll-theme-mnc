@@ -17,7 +17,7 @@ layout: default
 
       {%- if posts.size > 0 -%}
         {%- if page.list_title %}
-      <h3>{{ page.list_title | smartify }}</h3>
+      <h2>{{ page.list_title | smartify }}</h2>
         {% endif %}
         {%- assign date_format = site.jekyll-theme-mnc.date_format | default: "%b %-d, %Y" -%}
         {%- for post in posts %}
