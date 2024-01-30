@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <title>Redirecting from {{ page.redirect.from | relative_url }} to {{ page.redirect.to | absolute_url }}</title>
+  <title>Redirecting…</title>
   <meta name="description" content="Redirect page">
   <link rel="icon" type="image/png" href="{{ '/icon.png' | relative_url }}">
   <link rel="canonical" href="{{ page.redirect.to | absolute_url }}">
@@ -20,8 +20,10 @@
         <h1 itemprop="headline" itemscope itemtype="https://schema.org/Text">Redirecting…</h1>
       </header>
       <div itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/WebPageElement">
-        <a href="{{ page.redirect.to | absolute_url }}">Click here if you are not being redirected.</a>
-        <script>location="{{ page.redirect.to | absolute_url }}"</script>
+        <p>Redirecting from {{ page.redirect.from | relative_url }} to {{ page.redirect.to | absolute_url }}.</p>
+        <p>
+          <a href="{{ page.redirect.to | absolute_url }}">Click here if you are not being redirected.</a>
+        </p>
       </div>
     </article>
   </main>
