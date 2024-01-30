@@ -12,13 +12,53 @@
 
 ## Installation
 
-Add this line to your Jekyll site's Gemfile:
+Installation from Gem is recommended, but using a remote theme is also possible, even though it will increase build times a little, depending on your internet connection and the size of the theme download, because it will be downloaded during each build. Gems are installed locally.
+
+GitHub Pages gem users need to use the remote theme method.
+
+### Installation from Gem
+
+Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "jekyll-theme-mnc"
+gem "jekyll-theme-mnc", group: [:jekyll_plugins]
 ```
 
-Then execute `bundle` in your terminal.
+Then run `bundle` in your terminal.
+
+```sh
+bundle
+```
+
+Also add the theme to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: jekyll-theme-mnc
+```
+
+Make sure that this is the only `theme:` in `_config.yml`, and that there are no other `remote-theme:`.
+
+### Installation as Remote Theme
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "jekyll-remote-theme", group: [:jekyll_plugins]
+```
+
+Then run `bundle` in your terminal.
+
+```sh
+bundle
+```
+
+Finally add the remote theme to your Jekyll site's `_config.yml`:
+
+```yaml
+remote_theme: michaelnordmeyer/jekyll-theme-mnc
+```
+
+Make sure that this is the only `remote_theme:` in `_config.yml`, and that there are no other `theme:`.
 
 ## Contents At-A-Glance
 
@@ -30,6 +70,8 @@ Refers to files within the `_layouts` directory, that define the markup for your
   - `home.html` – The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
   - `page.html` – The layout for your documents that contain FrontMatter, but are not posts.
   - `post.html` – The layout for your posts.
+  - `redirect.html` – The layout which will be used by the optional plugin [Jekyll Redirect From](https://github.com/jekyll/jekyll-redirect-from)
+
 
 #### Home Layout
 
