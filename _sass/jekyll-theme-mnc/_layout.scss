@@ -332,9 +332,11 @@ video {
 
 
 // Footnotes. The class is automatically created by either the kramdown or gfm plugin
+hr + .footnotes {
+  margin-top: calc($spacing-unit / -2);
+}
+
 .footnotes {
-  margin-top: calc($spacing-unit);
-  border-top: 1px solid $table-border-color;
   font-size: $small-font-size;
 }
 

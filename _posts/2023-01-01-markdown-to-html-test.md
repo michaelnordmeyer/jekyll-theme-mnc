@@ -73,9 +73,9 @@ The emphasize tag should *italicize* text.
 
 ### Image Tag
 
-The image tag will show the image of `icon.webp`, if it exists:
+The image tag will show the image of `/icon.webp`, if it exists:
 
-![Image Alt Text](icon.webp "Image Title Text")
+![Image Alt Text](/icon.webp "Image Title Text")
 
 ### Pre-Formatted Tag
 
@@ -96,7 +96,7 @@ This tag shows **bold** text.
 
 ---
 
-## HTML5 Tags Supported by Github-Flavored Markdown
+## HTML5 Tags Supported by GitHub-Flavored Markdown
 
 ### Tables
 
@@ -114,7 +114,8 @@ This tag will let you ~~strikethrough~~ text.
 
 ### Footnotes
 
-Footnotes[^1] are not tags and therefore don’t belong to the HTML standard.
+Footnotes[^1] are not tags and therefore don’t belong to the HTML standard. Yet some Markdown parsers support them.
 
+---
 
 [^1]: You can go back to the place, where the `footnote` was made.
