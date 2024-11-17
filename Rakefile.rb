@@ -64,3 +64,9 @@ task :gempush, [:version] do |task, args|
   puts "==> Pushing gem #{artefact}-#{args[:version]}.gem to rubygems.org..."
   system "gem push #{artefact}-#{args[:version]}.gem"
 end
+
+desc "Cleans the source dir"
+task :clean do
+  puts "==> Cleaning #{domain}..."
+  system "bundle exec jekyll clean"
+end
