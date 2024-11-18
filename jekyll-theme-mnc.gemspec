@@ -16,6 +16,8 @@ Gem::Specification.new do |spec|
     f.match(%r!^(assets|_(data|includes|layouts|sass)/|(CODE_OF_CONDUCT|LICENSE|README)((\.(txt|md|markdown)|$)))!i)
   end
 
+  spec.required_ruby_version = '>= 2.7.0' # according to jekyll.gemspec
+
   spec.add_runtime_dependency "jekyll", ">= 3.9.3", "< 5.0"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.17"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
