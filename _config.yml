@@ -17,6 +17,8 @@ include: [.well-known]
 show_excerpts: false # set to true to show excerpts on the homepage
 timezone: Europe/Berlin # default: local timezone
 
+title_separator: " | "
+
 # Theme settings
 # https://docs.github.com/en/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-using-jekyll#customizing-your-themes-css
 # https://github.com/jekyll/minima#customizing-templates
