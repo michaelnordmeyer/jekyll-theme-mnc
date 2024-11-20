@@ -12,7 +12,7 @@ tumblelog_title: Tumblelog # Should mimic title in tumblelog.md
 tumblelog_description: Short-form posts with little text and/or image- or video-only.
 icon: # default: empty, favicon.ico won't be requested b/c of inline data
 
-exclude: [404.md, CODE_OF_CONDUCT.md, History.markdown, jekyll-theme-mnc.gemspec, LICENSE.txt, screenshot-dark.png, screenshot-light.png, script]
+exclude: [404.md, CODE_OF_CONDUCT.md, History.markdown, jekyll-theme-mnc.gemspec, LICENSE.txt, Rakefile.rb, README.md, repo-card.png, screenshot.png, script]
 include: [.well-known]
 show_excerpts: false # set to true to show excerpts on the homepage
 timezone: Europe/Berlin # default: local timezone
