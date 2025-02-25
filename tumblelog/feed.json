@@ -12,8 +12,8 @@ layout: none
   "language": "{{ site.lang | default: 'en' }}",
   "home_page_url": "{{ site.url }}/tumblelog",
   "feed_url": "{{ site.url }}/tumblelog/feed.json",
-  "icon": "{{ site.url }}/icon.png",
-  "favicon": "{{ site.url }}/icon.png",
+  "icon": "{{ site.url }}/assets/icons/icon.webp",
+  "favicon": "{{ site.url }}/assets/icons/icon.webp",
   "authors": [
     {
       "name": "{{ site.author.name }}",

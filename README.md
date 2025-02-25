@@ -256,7 +256,7 @@ jekyll-theme-mnc:
 You can declare an icon for the tumblelog in `_config.yml`.
 
 ```yaml
-tumblelog_icon: /icon.png
+tumblelog_icon: /assets/icons/icon.webp
 ```
 
 ### Header Image Support
