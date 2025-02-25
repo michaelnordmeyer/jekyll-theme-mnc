@@ -116,7 +116,7 @@ end
 desc "Pushes the gem to rubygems.org according to the gemspec’s version"
 task :gempush do
   puts "==> Pushing #{artefact} to rubygems.org..."
-  sh "gem push #{artefact}-#{Gem.loaded_specs[artefact]}.gem"
+  sh "gem push #{artefact}-#{version}.gem"
 end
 
 desc "Pushes the gem to rubygems.org, needs version number like `rake gempush\[1.0.0\]`"
