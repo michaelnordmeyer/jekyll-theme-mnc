@@ -265,7 +265,7 @@ A header image is displayed before the title on posts and pages, if `image` is a
 
 ```yaml
 ---
-image: /images/sample-image.jpg
+image: /images/sample-image.webp
 image_alt: The description of the image
 image_title: The title of the image
 ---

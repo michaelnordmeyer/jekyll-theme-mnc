@@ -8,7 +8,7 @@ layout: post
 
 An image post:
 
-![An image](/tumblelog/images/sample-image.jpg)
+![An image](/tumblelog/images/sample-image.webp)
 
 ## A Very Long Article Headline to Check for Size and Line Spacing
 
