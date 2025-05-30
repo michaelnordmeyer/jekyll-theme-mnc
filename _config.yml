@@ -84,5 +84,10 @@ jekyll-theme-mnc:
 
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-seo-tag
+
+## Plugin jekyll-redirect-from settings
+redirect_from:
+  json: false
