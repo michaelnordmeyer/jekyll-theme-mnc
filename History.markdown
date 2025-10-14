@@ -33,7 +33,7 @@
   * Added old-fashioned favicon support
   * Added optional header image before post title
   * Added reading time to post header
-  * Added JSON feed in addition to jekyll-seo-tag's atom feed
+  * Added JSON feed in addition to jekyll-seo-tag's Atom feed
   * Removed single RSS link in footer, links are now after post to reasonably expose JSON feeds
   * Removed columns in footer to optimizate for mobile usage
   * Added bio to footer to cater for single-author blogging
