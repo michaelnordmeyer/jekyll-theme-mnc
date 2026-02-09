@@ -321,9 +321,9 @@ embed,
 iframe,
 object,
 video {
-	margin-bottom: $spacing-unit;
-	max-width: 100%;
-	vertical-align: middle;
+  margin-bottom: $spacing-unit;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: $on-small) {
